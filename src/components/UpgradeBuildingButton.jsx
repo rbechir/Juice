@@ -1,5 +1,6 @@
 import React from 'react';
-import { currency } from '../products_en'
+import './UpgradeBuildingButton.css';
+import { currency } from '../products_en';
 
 const UpgradeBuildingButton = ({ building, storage, upgradeBuilding }) => {
     if (storage[currency].stock >= building.price && building.level < 9) {

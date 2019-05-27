@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Buildings from './components/Buildings';
 import products, { currency } from './products_en';
 import buildings from './buildings_en';
-import JuiceButton from './components/JuiceButton';
+import JuiceProduction from './components/JuiceProduction';
 
 class App extends Component {
   state = {
@@ -94,8 +94,8 @@ class App extends Component {
   render() {
     return (
       <div>
-        <h1>{this.state.storage[currency].stock}ml</h1>
-        <JuiceButton
+        <JuiceProduction
+          stock={this.state.storage[currency].stock}
           manualJuice={this.manualJuice} />
         <Buildings
           buildings={this.state.buildings}

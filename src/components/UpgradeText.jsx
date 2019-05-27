@@ -6,7 +6,7 @@ const UpgradeText = ({ building }) => {
     } else {
         return (
             <h3>
-                Pay {building.price} to upgrade to level {building.level + 1}
+                Pay {building.price} to upgrade
             </h3>
         )
     }

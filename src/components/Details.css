@@ -1,7 +1,5 @@
-.details-green {
-    color: green;
-}
-
-.details-red {
-    color: red;
+.prod {
+    font-size: 20px;
+    margin: 5px;
+    text-align: center;
 }

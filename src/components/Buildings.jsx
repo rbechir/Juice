@@ -1,12 +1,12 @@
-import React, { Fragment } from 'react';
+import React from 'react';
+import './Buildings.css';
 import Building from './Building';
-import UnlockBuildingButton from './UnlockBuildingButton';
 
 const Buildings = ({ buildings, storage, completeDetail, buyProduct, buyBuilding, upgradeBuilding }) => {
     return (
-        Object.keys(buildings)
-            .map(key_building => {
-                if (buildings[key_building].unlocked) {
+        <div className='buildings'>
+            {Object.keys(buildings)
+                .map(key_building => {
                     return (
                         <Building
                             key={key_building}
@@ -14,22 +14,11 @@ const Buildings = ({ buildings, storage, completeDetail, buyProduct, buyBuilding
                             storage={storage}
                             completeDetail={completeDetail}
                             buyProduct={buyProduct}
+                            buyBuilding={buyBuilding}
                             upgradeBuilding={upgradeBuilding} />
                     );
-                } else {
-                    return (
-                        <Fragment key={key_building}>
-                            <h2>
-                                Pay {buildings[key_building].price} to unlock {key_building}
-                            </h2>
-                            <UnlockBuildingButton
-                                building={buildings[key_building]}
-                                storage={storage}
-                                buyBuilding={buyBuilding} />
-                        </Fragment>
-                    );
-                }
-            })
+                })}
+        </div>
     );
 }
 

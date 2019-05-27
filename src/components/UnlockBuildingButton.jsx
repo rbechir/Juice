@@ -1,4 +1,5 @@
 import React from 'react';
+import './UnlockBuildingButton.css';
 import { currency } from '../products_en';
 
 const UnlockBuildingButton = ({ building, storage, buyBuilding }) => {
@@ -6,7 +7,7 @@ const UnlockBuildingButton = ({ building, storage, buyBuilding }) => {
         return (
             <button className='unlock-building-button'
                 onClick={() => buyBuilding(building.name)}>
-                Unlock
+                <strong>Unlock</strong>
             </button>
         );
     } else {

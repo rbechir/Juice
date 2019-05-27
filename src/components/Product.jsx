@@ -1,30 +1,33 @@
 import React from 'react';
+import Popup from 'reactjs-popup';
+import './Product.css'
 import Details from './Details';
-import BuyProductButton from './BuyProductButton';
+import Logo from './Logo';
 
 const Product = ({ key_product, storage, completeDetail, buyProduct }) => {
     return (
         <div className='product'>
-            <h3>
-                {key_product} {storage[key_product].stock}
-            </h3>
-            <p>
-                {storage[key_product].stock * storage[key_product].production}ml/s
-            </p>
-            {Object.keys(storage[key_product].require)
-                .map(key_element => (
-                    <Details
-                        key={key_element}
-                        storage={storage}
-                        key_element={key_element}
-                        key_product={key_product}
-                        completeDetail={completeDetail} />
-                ))
-            }
-            <BuyProductButton
-                storage={storage}
-                key_product={key_product}
-                buyProduct={buyProduct} />
+            <Popup
+                trigger={
+                    <div>
+                        <Logo
+                            storage={storage}
+                            key_product={key_product}
+                            buyProduct={buyProduct} />
+                    </div>}
+                position='right center'
+                on='hover'
+                offsetX={100}>
+                <Details
+                    storage={storage}
+                    key_product={key_product}
+                    completeDetail={completeDetail} />
+            </Popup>
+            <div className={`name-container tier${storage[key_product].level}`}>
+                <div className='name'>
+                    <strong>{key_product}<br/>{storage[key_product].stock}</strong>
+                </div>
+            </div>
         </div>
     );
 }
