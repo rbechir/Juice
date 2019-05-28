@@ -1,7 +1,7 @@
 .product {
     display: flex;
     align-items: center;
-    margin: 3px;
+    margin-bottom: 5px;
 }
 
 .name-container {

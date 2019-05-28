@@ -15,9 +15,10 @@ const Product = ({ key_product, storage, completeDetail, buyProduct }) => {
                             key_product={key_product}
                             buyProduct={buyProduct} />
                     </div>}
-                position='right center'
+                position='bottom left'
                 on='hover'
-                offsetX={100}>
+                mouseEnterDelay={500}
+                mouseLeaveDelay={0}>
                 <Details
                     storage={storage}
                     key_product={key_product}
