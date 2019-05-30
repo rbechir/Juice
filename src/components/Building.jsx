@@ -5,7 +5,7 @@ import UnlockBuildingButton from './UnlockBuildingButton';
 import UpgradeBuildingButton from './UpgradeBuildingButton';
 import UpgradeText from './UpgradeText';
 
-const Building = ({ building, storage, buyProduct, buyBuilding, upgradeBuilding }) => {
+const Building = ({ building, storage, level, buyProduct, buyBuilding, upgradeBuilding }) => {
     if (building.unlocked) {
         return (
             <div className='building'>
@@ -16,14 +16,16 @@ const Building = ({ building, storage, buyProduct, buyBuilding, upgradeBuilding 
                     storage={storage}
                     buyProduct={buyProduct} />
                 <UpgradeText
-                    building={building} />
+                    building={building}
+                    level={level} />
                 <UpgradeBuildingButton
                     building={building}
                     storage={storage}
+                    level={level}
                     upgradeBuilding={upgradeBuilding} />
             </div>
         );
-    } else {
+    } else if (level >= building.level) {
         return (
             <div className='building'>
                 <h2>{building.name}</h2>
@@ -36,6 +38,8 @@ const Building = ({ building, storage, buyProduct, buyBuilding, upgradeBuilding 
                     buyBuilding={buyBuilding} />
             </div>
         );
+    } else {
+        return (null);
     }
 }
 

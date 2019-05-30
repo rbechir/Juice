@@ -7,5 +7,7 @@ h3 {
     font-size: 15px;
     background-color: #dbddec;
     border-style: ridge;
-    border-radius: 5px;
+    border-color: black;
+    border-width: 4px;
+    border-radius: 10px;
 }

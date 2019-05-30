@@ -9,11 +9,11 @@ const getImage = key_product => {
     }
 }
 
-const JuiceButton = ({ manualJuice }) => {
+const JuiceButton = ({ level, manualJuice }) => {
     return (
         <div className='juice-button-container'>
             <img className='juice-button'
-                onClick={() => manualJuice(10)}
+                onClick={() => manualJuice(level * 10)}
                 src={getImage('Juice')}
                 alt='Click here' />
         </div>

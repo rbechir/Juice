@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
+import './App.css';
 import Buildings from './components/Buildings';
 import products, { currency } from './products_en';
 import buildings from './buildings_en';
 import JuiceProduction from './components/JuiceProduction';
+import PlayerLevel from './components/PlayerLevel';
 
 class App extends Component {
   state = {
@@ -10,6 +12,18 @@ class App extends Component {
     buildings: buildings,
     level: 1,
     production: 0
+  }
+
+  levelUp = () => {
+    let storage = { ...this.state.storage };
+    let level = this.state.level;
+    storage[currency].stock -= level * 1000;
+    level += 1;
+    storage = this.checkJuice(storage);
+    this.setState({
+      storage,
+      level
+    });
   }
 
   checkJuice = storage => {
@@ -92,6 +106,7 @@ class App extends Component {
   manualJuice = value => {
     let storage = { ...this.state.storage };
     storage[currency].stock += value;
+    storage = this.checkJuice(storage);
     this.setState({
       storage
     });
@@ -108,12 +123,20 @@ class App extends Component {
   render() {
     return (
       <div>
-        <JuiceProduction
-          stock={this.state.storage[currency].stock}
-          manualJuice={this.manualJuice} />
+        <div className='header'>
+          <JuiceProduction
+            level={this.state.level}
+            stock={this.state.storage[currency].stock}
+            manualJuice={this.manualJuice} />
+          <PlayerLevel
+            storage={this.state.storage}
+            level={this.state.level}
+            levelUp={this.levelUp} />
+        </div>
         <Buildings
           buildings={this.state.buildings}
           storage={this.state.storage}
+          level={this.state.level}
           buyProduct={this.buyProduct}
           buyBuilding={this.buyBuilding}
           upgradeBuilding={this.upgradeBuilding} />

@@ -1,7 +1,7 @@
 import React from 'react';
 
-const UpgradeText = ({ building }) => {
-    if (building.level >= 9) {
+const UpgradeText = ({ building, level }) => {
+    if (building.level >= 9 || building.level >= level) {
         return (null);
     } else {
         return (

@@ -2,7 +2,7 @@ import React from 'react';
 import './Buildings.css';
 import Building from './Building';
 
-const Buildings = ({ buildings, storage, buyProduct, buyBuilding, upgradeBuilding }) => {
+const Buildings = ({ buildings, storage, level, buyProduct, buyBuilding, upgradeBuilding }) => {
     return (
         <div className='buildings'>
             {Object.keys(buildings)
@@ -12,6 +12,7 @@ const Buildings = ({ buildings, storage, buyProduct, buyBuilding, upgradeBuildin
                             key={key_building}
                             building={buildings[key_building]}
                             storage={storage}
+                            level={level}
                             buyProduct={buyProduct}
                             buyBuilding={buyBuilding}
                             upgradeBuilding={upgradeBuilding} />
