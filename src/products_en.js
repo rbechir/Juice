@@ -16,6 +16,25 @@ const products = {
         complete: {
             Juice: false
         },
+        usedBy: [
+            'Doublet',
+            'Unremarkable tunic',
+            'Leather armor',
+            "Guard's uniform",
+            'Dagger',
+            'Linen clothing',
+            'Silver chain',
+            'Shortbow',
+            'Silk garment',
+            'Composite bow',
+            'Light crossbow',
+            'Pure water',
+            'Heavy crossbow',
+            'Barque',
+            'Smuggling vessel',
+            'Dyed textile',
+            'Fine wood'
+        ],
         production: 1
     },
     Fur: {
@@ -28,6 +47,21 @@ const products = {
         complete: {
             Juice: false
         },
+        usedBy: [
+            'Doublet',
+            'Unremarkable tunic',
+            'Leather armor',
+            "Guard's uniform",
+            'Ostler',
+            'Breastplate',
+            'Barred helm',
+            'Linen clothing',
+            'Silver chain',
+            'Shortbow',
+            'Silk garment',
+            'Silver torc',
+            'Light crossbow'
+        ],
         production: 1
     },
     Wood: {
@@ -40,6 +74,26 @@ const products = {
         complete: {
             Juice: false
         },
+        usedBy: [
+            'Shortsword',
+            'Halfhelm',
+            'Dagger',
+            'Barred helm',
+            'Axe',
+            'Flickering fire',
+            'Shortbow',
+            'Wood shield',
+            'Pike',
+            'Broadsword',
+            'Hard wood',
+            'Mead',
+            'Composite bow',
+            'Light crossbow',
+            'Heavy crossbow',
+            'Barque',
+            'Fire archer',
+            'Fine wood'
+        ],
         production: 1
     },
     Iron: {
@@ -52,6 +106,22 @@ const products = {
         complete: {
             Juice: false
         },
+        usedBy: [
+            'Shortsword',
+            'Longsword',
+            'Halfhelm',
+            'Dagger',
+            'Breastplate',
+            'Axe',
+            'Flickering fire',
+            'Wood shield',
+            'Pike',
+            'Broadsword',
+            'Steel',
+            'Hard wood',
+            'Metal shield',
+            'Fire archer'
+        ],
         production: 1
     },
     Smallfolk: {
@@ -64,6 +134,12 @@ const products = {
         complete: {
             Juice: false
         },
+        usedBy: [
+            'Ostler',
+            'Foot soldier',
+            'Militia',
+            'Eavesdropper'
+        ],
         production: 1
     },
     Grains: {
@@ -76,6 +152,15 @@ const products = {
         complete: {
             Juice: false
         },
+        usedBy: [
+            'Ostler',
+            'Milk of the poppy',
+            'Flickering fire',
+            'Dream wine',
+            'Mead',
+            'Thief',
+            'Dyed textile'
+        ],
         production: 1
     },
     Horse: {
@@ -88,6 +173,9 @@ const products = {
         complete: {
             Juice: false
         },
+        usedBy: [
+            'Warhorse'
+        ],
         production: 1
     },
     Ore: {
@@ -100,6 +188,14 @@ const products = {
         complete: {
             Juice: false
         },
+        usedBy: [
+            'Gold ring',
+            'Purse',
+            'Silver chain',
+            'Silver torc',
+            'Gold torc',
+            'Thief'
+        ],
         production: 1
     },
     Fish: {
@@ -112,6 +208,10 @@ const products = {
         complete: {
             Juice: false
         },
+        usedBy: [
+            'Milk of the poppy',
+            'Dream wine'
+        ],
         production: 1
     },
     Stone: {
@@ -124,6 +224,10 @@ const products = {
         complete: {
             Juice: false
         },
+        usedBy: [
+            'Mead',
+            'Wildfire'
+        ],
         production: 1
     },
     Steel: {
@@ -140,6 +244,12 @@ const products = {
             'Flickering fire': false,
             Iron: false
         },
+        usedBy: [
+            'Hefty broadsword',
+            'Masterwork greatsword',
+            'Steel-shod warhorse',
+            'Elite phalanx'
+        ],
         production: 33
     },
     'Hard wood': {
@@ -156,6 +266,12 @@ const products = {
             Wood: false,
             Iron: false
         },
+        usedBy: [
+            'Hefty broadsword',
+            'Masterwork greatsword',
+            'Blazing fire archer',
+            'Elite phalanx'
+        ],
         production: 19
     },
     'Dyed textile': {
@@ -172,6 +288,9 @@ const products = {
             Cloth: false,
             Grains: false
         },
+        usedBy: [
+            'Guild assassin'
+        ],
         production: 68
     },
     'Fine wood': {
@@ -188,6 +307,9 @@ const products = {
             Wood: false,
             Cloth: false
         },
+        usedBy: [
+            'Guild assassin'
+        ],
         production: 67
     },
     Shortsword: {
@@ -204,6 +326,10 @@ const products = {
             Wood: false,
             Iron: false
         },
+        usedBy: [
+            'Longsword',
+            'Broadsword'
+        ],
         production: 4
     },
     Longsword: {
@@ -220,6 +346,10 @@ const products = {
             Shortsword: false,
             Iron: false
         },
+        usedBy: [
+            'Pike',
+            'Foot soldier'
+        ],
         production: 8
     },
     Dagger: {
@@ -238,6 +368,9 @@ const products = {
             Iron: false,
             Cloth: false
         },
+        usedBy: [
+            'Axe'
+        ],
         production: 8
     },
     Axe: {
@@ -256,6 +389,9 @@ const products = {
             Iron: false,
             Wood: false
         },
+        usedBy: [
+            'Militia'
+        ],
         production: 26
     },
     Shortbow: {
@@ -274,6 +410,10 @@ const products = {
             Cloth: false,
             Fur: false
         },
+        usedBy: [
+            'Bowman',
+            'Composite bow'
+        ],
         production: 14
     },
     'Wood shield': {
@@ -290,6 +430,9 @@ const products = {
             Wood: false,
             Iron: false
         },
+        usedBy: [
+            'Metal shield'
+        ],
         production: 14
     },
     Pike: {
@@ -308,6 +451,10 @@ const products = {
             Wood: false,
             Iron: false
         },
+        usedBy: [
+            'Lancer',
+            'Pikeman'
+        ],
         production: 38
     },
     Broadsword: {
@@ -326,6 +473,9 @@ const products = {
             Iron: false,
             Wood: false
         },
+        usedBy: [
+            'Hefty broadsword'
+        ],
         production: 30
     },
     'Composite bow': {
@@ -344,6 +494,9 @@ const products = {
             Wood: false,
             Cloth: false
         },
+        usedBy: [
+            'Archer'
+        ],
         production: 50
     },
     'Metal shield': {
@@ -360,6 +513,10 @@ const products = {
             'Wood shield': false,
             Iron: false
         },
+        usedBy: [
+            'Shield bearers',
+            'Heavy knight'
+        ],
         production: 50
     },
     'Light crossbow': {
@@ -378,6 +535,9 @@ const products = {
             Cloth: false,
             Fur: false
         },
+        usedBy: [
+            'Heavy crossbow'
+        ],
         production: 22
     },
     'Hefty broadsword': {
@@ -396,6 +556,9 @@ const products = {
             Steel: false,
             'Hard wood': false
         },
+        usedBy: [
+            'Masterwork greatsword'
+        ],
         production: 106
     },
     'Heavy crossbow': {
@@ -414,6 +577,9 @@ const products = {
             Wood: false,
             Cloth: false
         },
+        usedBy: [
+            'Assassin'
+        ],
         production: 66
     },
     'Masterwork greatsword': {
@@ -432,6 +598,9 @@ const products = {
             Steel: false,
             'Hard wood': false
         },
+        usedBy: [
+            'Elite cavalryman'
+        ],
         production: 878
     },
     Doublet: {
@@ -448,6 +617,9 @@ const products = {
             Cloth: false,
             Fur: false
         },
+        usedBy: [
+            'Leather armor'
+        ],
         production: 4
     },
     'Unremarkable tunic': {
@@ -464,6 +636,9 @@ const products = {
             Cloth: false,
             Fur: false
         },
+        usedBy: [
+            "Guard's uniform"
+        ],
         production: 6
     },
     'Leather armor': {
@@ -482,6 +657,10 @@ const products = {
             Fur: false,
             Cloth: false
         },
+        usedBy: [
+            'Breastplate',
+            'Warhorse'
+        ],
         production: 8
     },
     "Guard's uniform": {
@@ -500,6 +679,10 @@ const products = {
             Fur: false,
             Cloth: false
         },
+        usedBy: [
+            'Foot soldier',
+            'Assassin'
+        ],
         production: 22
     },
     Purse: {
@@ -516,6 +699,9 @@ const products = {
             'Gold ring': false,
             Ore: false
         },
+        usedBy: [
+            'Mounted knight'
+        ],
         production: 19
     },
     'Linen clothing': {
@@ -532,6 +718,9 @@ const products = {
             Cloth: false,
             Fur: false
         },
+        usedBy: [
+            'Silk garment'
+        ],
         production: 14
     },
     'Silk garment': {
@@ -550,6 +739,9 @@ const products = {
             Cloth: false,
             Fur: false
         },
+        usedBy: [
+            'Lancer'
+        ],
         production: 42
     },
     Halfhelm: {
@@ -566,6 +758,10 @@ const products = {
             Iron: false,
             Wood: false
         },
+        usedBy: [
+            'Barred helm',
+            'Phalanx'
+        ],
         production: 8
     },
     Breastplate: {
@@ -584,6 +780,9 @@ const products = {
             Iron: false,
             Fur: false
         },
+        usedBy: [
+            'Armored knight'
+        ],
         production: 26
     },
     'Barred helm': {
@@ -602,6 +801,9 @@ const products = {
             Fur: false,
             Wood: false
         },
+        usedBy: [
+            'Armored knight'
+        ],
         production: 26
     },
     'Gold ring': {
@@ -616,6 +818,10 @@ const products = {
             Juice: false,
             Ore: false
         },
+        usedBy: [
+            'Purse',
+            'Gold torc'
+        ],
         production: 9
     },
     'Silver chain': {
@@ -634,6 +840,9 @@ const products = {
             Fur: false,
             Cloth: false
         },
+        usedBy: [
+            'Silver torc'
+        ],
         production: 13
     },
     'Silver torc': {
@@ -652,6 +861,9 @@ const products = {
             Ore: false,
             Fur: false
         },
+        usedBy: [
+            'Gold torc'
+        ],
         production: 31
     },
     'Gold torc': {
@@ -670,6 +882,9 @@ const products = {
             'Gold ring': false,
             Ore: false
         },
+        usedBy: [
+            'Heavy knight'
+        ],
         production: 78
     },
     Ostler: {
@@ -688,6 +903,10 @@ const products = {
             Fur: false,
             Grains: false
         },
+        usedBy: [
+            'Warhorse',
+            'Steel-shod warhorse'
+        ],
         production: 8
     },
     'Warhorse': {
@@ -706,6 +925,10 @@ const products = {
             Ostler: false,
             'Leather armor': false
         },
+        usedBy: [
+            'Steel-shod warhorse',
+            'Mounted knight'
+        ],
         production: 21
     },
     'Armored knight': {
@@ -724,6 +947,9 @@ const products = {
             Breastplate: false,
             'Barred helm': false
         },
+        usedBy: [
+            'Mounted knight'
+        ],
         production: 95
     },
     'Mounted knight': {
@@ -742,6 +968,9 @@ const products = {
             Warhorse: false,
             Purse: false
         },
+        usedBy: [
+            'Lancer'
+        ],
         production: 151
     },
     'Lancer': {
@@ -760,6 +989,9 @@ const products = {
             Pike: false,
             'Silk garment': false
         },
+        usedBy: [
+            'Heavy knight'
+        ],
         production: 263
     },
     'Heavy knight': {
@@ -778,6 +1010,9 @@ const products = {
             'Gold torc': false,
             'Metal shield': false
         },
+        usedBy: [
+            'Elite cavalryman'
+        ],
         production: 455
     },
     'Steel-shod warhorse': {
@@ -796,6 +1031,9 @@ const products = {
             Ostler: false,
             Steel: false
         },
+        usedBy: [
+            'Elite cavalryman'
+        ],
         production: 246
     },
     'Elite cavalryman': {
@@ -814,6 +1052,7 @@ const products = {
             'Steel-shod warhorse': false,
             'Masterwork greatsword': false
         },
+        usedBy: [],
         production: 1707
     },
     'Foot soldier': {
@@ -832,6 +1071,9 @@ const products = {
             Longsword: false,
             "Guard's uniform": false
         },
+        usedBy: [
+            'Armored knight'
+        ],
         production: 35
     },
     Militia: {
@@ -848,6 +1090,12 @@ const products = {
             Smallfolk: false,
             Axe: false
         },
+        usedBy: [
+            'Bowman',
+            'Archer',
+            'Pikeman',
+            'Shield bearers'
+        ],
         production: 35
     },
     Bowman: {
@@ -864,6 +1112,9 @@ const products = {
             Shortbow: false,
             Militia: false
         },
+        usedBy: [
+            'Archer'
+        ],
         production: 163
     },
     Archer: {
@@ -882,6 +1133,9 @@ const products = {
             Militia: false,
             Bowman: false
         },
+        usedBy: [
+            'Fire archer'
+        ],
         production: 528
     },
     Pikeman: {
@@ -898,6 +1152,9 @@ const products = {
             Militia: false,
             Pike: false
         },
+        usedBy: [
+            'Phalanx'
+        ],
         production: 20
     },
     'Shield bearers': {
@@ -914,6 +1171,9 @@ const products = {
             Militia: false,
             'Metal shield': false
         },
+        usedBy: [
+            'Phalanx'
+        ],
         production: 202
     },
     'Fire archer': {
@@ -932,6 +1192,10 @@ const products = {
             Wood: false,
             Iron: false
         },
+        usedBy: [
+            'Fireship',
+            'Blazing fire archer'
+        ],
         production: 596
     },
     Phalanx: {
@@ -950,6 +1214,9 @@ const products = {
             Pikeman: false,
             Halfhelm: false
         },
+        usedBy: [
+            'Elite phalanx'
+        ],
         production: 710
     },
     'Blazing fire archer': {
@@ -968,6 +1235,7 @@ const products = {
             'Flickering fire': false,
             'Hard wood': false
         },
+        usedBy: [],
         production: 2186
     },
     'Elite phalanx': {
@@ -986,6 +1254,7 @@ const products = {
             Steel: false,
             'Hard wood': false
         },
+        usedBy: [],
         production: 2398
     },
     'Milk of the poppy': {
@@ -1002,6 +1271,9 @@ const products = {
             Grains: false,
             Fish: false
         },
+        usedBy: [
+            'Dream wine'
+        ],
         production: 10
     },
     'Flickering fire': {
@@ -1020,6 +1292,11 @@ const products = {
             Grains: false,
             Iron: false
         },
+        usedBy: [
+            'Steel',
+            'Wildfire',
+            'Blazing fire archer'
+        ],
         production: 14
     },
     'Dream wine': {
@@ -1038,6 +1315,9 @@ const products = {
             Grains: false,
             Fish: false
         },
+        usedBy: [
+            'Eavesdropper'
+        ],
         production: 30
     },
     Mead: {
@@ -1056,6 +1336,9 @@ const products = {
             Wood: false,
             Stone: false
         },
+        usedBy: [
+            'Pure water'
+        ],
         production: 21
     },
     'Pure water': {
@@ -1072,6 +1355,9 @@ const products = {
             Mead: false,
             Cloth: false
         },
+        usedBy: [
+            'Wildfire'
+        ],
         production: 56
     },
     'Wildfire': {
@@ -1090,6 +1376,9 @@ const products = {
             'Flickering fire': false,
             Stone: false
         },
+        usedBy: [
+            'Fireship'
+        ],
         production: 208
     },
     Eavesdropper: {
@@ -1106,6 +1395,9 @@ const products = {
             Smallfolk: false,
             'Dream wine': false
         },
+        usedBy: [
+            'Thief'
+        ],
         production: 47
     },
     Thief: {
@@ -1124,6 +1416,10 @@ const products = {
             Grains: false,
             Ore: false
         },
+        usedBy: [
+            'Smuggling vessel',
+            'Assassin'
+        ],
         production: 87
     },
     Barque: {
@@ -1140,6 +1436,9 @@ const products = {
             Wood: false,
             Cloth: false
         },
+        usedBy: [
+            'Smuggling vessel'
+        ],
         production: 45
     },
     'Smuggling vessel': {
@@ -1158,6 +1457,9 @@ const products = {
             Cloth: false,
             Thief: false
         },
+        usedBy: [
+            'Fireship'
+        ],
         production: 509
     },
     Assassin: {
@@ -1176,6 +1478,9 @@ const products = {
             'Heavy crossbow': false,
             "Guard's uniform": false
         },
+        usedBy: [
+            'Guild assassin'
+        ],
         production: 239
     },
     Fireship: {
@@ -1194,6 +1499,7 @@ const products = {
             'Smuggling vessel': false,
             'Fire archer': false
         },
+        usedBy: [],
         production: 4002
     },
     'Guild assassin': {
@@ -1212,6 +1518,7 @@ const products = {
             'Dyed textile': false,
             'Fine wood': false
         },
+        usedBy: [],
         production: 2870
     }
 }

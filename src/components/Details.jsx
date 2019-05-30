@@ -2,7 +2,7 @@ import React from 'react';
 import './Details.css';
 import Detail from './Detail';
 
-const Details = ({ storage, key_product, completeDetail }) => {
+const Details = ({ storage, key_product }) => {
     return (
         <div className='details'>
             <div className='prod'>
@@ -14,8 +14,7 @@ const Details = ({ storage, key_product, completeDetail }) => {
                         <Detail
                             storage={storage}
                             key_element={key_element}
-                            key_product={key_product}
-                            completeDetail={completeDetail} />
+                            key_product={key_product} />
                     </div>
             ))}
         </div>

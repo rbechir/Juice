@@ -6,30 +6,48 @@ import JuiceProduction from './components/JuiceProduction';
 
 class App extends Component {
   state = {
-    storage: {},
-    buildings: {},
+    storage: products,
+    buildings: buildings,
     level: 1,
     production: 0
   }
 
-  completeDetail = (key_product, key_element, value) => {
-    let storage = { ...this.state.storage };
-    storage[key_product].complete[key_element] = value;
-    this.setState({
-      storage
+  checkJuice = storage => {
+    Object.keys(storage).forEach(key_product => {
+      if (key_product !== currency) {
+        if (storage[currency].stock >= storage[key_product].require[currency]) {
+          storage[key_product].complete[currency] = true;
+        } else {
+          storage[key_product].complete[currency] = false;
+        }
+      }
     });
+    return (storage);
   }
 
   buyProduct = key_product => {
     let storage = { ...this.state.storage };
     let production = this.state.production;
-    Object.keys(storage[key_product].require)
-      .forEach(key_element => {
-        storage[key_element].stock -= storage[key_product].require[key_element];
-        production -= storage[key_element].production * storage[key_product].require[key_element]
-      });
-    production += storage[key_product].production
+    Object.keys(storage[key_product].require).forEach(key_element => {
+      storage[key_element].stock -= storage[key_product].require[key_element];
+      production -= storage[key_element].production * storage[key_product].require[key_element];
+      if (key_element !== currency) {
+        storage[key_element].usedBy.forEach(key_using => {
+          if (storage[key_element].stock < storage[key_using].require[key_element]) {
+            storage[key_using].complete[key_element] = false;
+          }
+        });
+      } else {
+        storage = this.checkJuice(storage);
+      }
+    });
+    production += storage[key_product].production;
     storage[key_product].stock += 1;
+    storage[key_product].usedBy.forEach(key_element => {
+        if (storage[key_product].stock >= storage[key_element].require[key_product]) {
+          storage[key_element].complete[key_product] = true;
+        }
+    });
     this.setState({
       storage,
       production
@@ -42,10 +60,11 @@ class App extends Component {
     storage[currency].stock -= buildings[key_building].price;
     buildings[key_building].unlocked = true;
     buildings[key_building].price *= 2;
+    storage = this.checkJuice(storage);
     this.setState({
       storage,
       buildings
-    })
+    });
   }
 
   upgradeBuilding = key_building => {
@@ -54,18 +73,20 @@ class App extends Component {
     storage[currency].stock -= buildings[key_building].price;
     buildings[key_building].level += 1;
     buildings[key_building].price *= 2;
+    storage = this.checkJuice(storage);
     this.setState({
       storage,
       buildings
-    })
+    });
   }
 
   autoJuice = () => {
     let storage = { ...this.state.storage };
     storage[currency].stock += this.state.production;
+    storage = this.checkJuice(storage);
     this.setState({
       storage
-    })
+    });
   }
 
   manualJuice = value => {
@@ -73,13 +94,6 @@ class App extends Component {
     storage[currency].stock += value;
     this.setState({
       storage
-    })
-  }
-
-  componentWillMount() {
-    this.setState({
-      storage: products,
-      buildings
     });
   }
 
@@ -100,7 +114,6 @@ class App extends Component {
         <Buildings
           buildings={this.state.buildings}
           storage={this.state.storage}
-          completeDetail={this.completeDetail}
           buyProduct={this.buyProduct}
           buyBuilding={this.buyBuilding}
           upgradeBuilding={this.upgradeBuilding} />
