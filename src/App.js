@@ -41,7 +41,6 @@ class App extends Component {
   }
 
   buyProductNoState = (key_product, storage, production) => {
-    console.log(key_product)
     Object.keys(storage[key_product].require).forEach(key_element => {
       storage[key_element].stock -= storage[key_product].require[key_element];
       production -= storage[key_element].production * storage[key_product].require[key_element];
