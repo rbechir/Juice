@@ -1,0 +1,55 @@
+.product {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.name-container {
+    height: 50px;
+    width: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.name {
+    font-size: 13px;
+    text-align: center;
+    margin: 5px;
+}
+
+.tier1 {
+    background-color: #F8F8FF;
+}
+
+.tier2 {
+    background-color: #A9A9A9;
+}
+
+.tier3 {
+    background-color: #228B22;
+}
+
+.tier4 {
+    background-color: #00CED1;
+}
+
+.tier5 {
+    background-color: #4169E1;
+}
+
+.tier6 {
+    background-color: #8A2BE2;
+}
+
+.tier7 {
+    background-color: #FF8C00;
+}
+
+.tier8 {
+    background-color: #FFD700;
+}
+
+.tier9 {
+    background-color: #FF4500;
+}

@@ -1,0 +1,10 @@
+.workers {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.worker-transparent {
+    opacity: 0.2;
+}

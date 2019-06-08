@@ -1,0 +1,17 @@
+.detail {
+    margin: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.stock {
+    text-align: center;
+    width: 150px;
+}
+.green {
+    color: green;
+}
+
+.red {
+    color: red;
+}
