@@ -3,8 +3,9 @@ import Popup from 'reactjs-popup';
 import './Product.css'
 import Details from './Details';
 import Logo from './Logo';
+import Workers from './Workers';
 
-const Product = ({ key_product, storage, buyProduct }) => {
+const Product = ({ key_product, storage, production, workersCost, buyProduct, changeWorkerNumber }) => {
     return (
         <div className='product'>
             <Logo
@@ -27,6 +28,12 @@ const Product = ({ key_product, storage, buyProduct }) => {
                     storage={storage}
                     key_product={key_product} />
             </Popup>
+            <Workers
+                storage={storage}
+                production={production}
+                workersCost={workersCost}
+                key_product={key_product}
+                changeWorkerNumber={changeWorkerNumber} />
         </div>
     );
 }

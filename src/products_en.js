@@ -10,6 +10,7 @@ const products = {
         name: 'Cloth',
         level: 1,
         stock: 0,
+        totalCost: 100,
         require: {
             Juice: 100
         },
@@ -35,12 +36,14 @@ const products = {
             'Dyed textile',
             'Fine wood'
         ],
-        production: 1
+        production: 1,
+        workers: 0
     },
     Fur: {
         name: 'Fur',
         level: 1,
         stock: 0,
+        totalCost: 100,
         require: {
             Juice: 100
         },
@@ -62,12 +65,14 @@ const products = {
             'Silver torc',
             'Light crossbow'
         ],
-        production: 1
+        production: 1,
+        workers: 0
     },
     Wood: {
         name: 'Wood',
         level: 1,
         stock: 0,
+        totalCost: 100,
         require: {
             Juice: 100
         },
@@ -94,12 +99,14 @@ const products = {
             'Fire archer',
             'Fine wood'
         ],
-        production: 1
+        production: 1,
+        workers: 0
     },
     Iron: {
         name: 'Iron',
         level: 1,
         stock: 0,
+        totalCost: 100,
         require: {
             Juice: 100
         },
@@ -122,12 +129,14 @@ const products = {
             'Metal shield',
             'Fire archer'
         ],
-        production: 1
+        production: 1,
+        workers: 0
     },
     Smallfolk: {
         name: 'Smallfolk',
         level: 2,
         stock: 0,
+        totalCost: 100,
         require: {
             Juice: 100
         },
@@ -140,12 +149,14 @@ const products = {
             'Militia',
             'Eavesdropper'
         ],
-        production: 1
+        production: 1,
+        workers: 0
     },
     Grains: {
         name: 'Grains',
         level: 2,
         stock: 0,
+        totalCost: 100,
         require: {
             Juice: 100
         },
@@ -161,12 +172,14 @@ const products = {
             'Thief',
             'Dyed textile'
         ],
-        production: 1
+        production: 1,
+        workers: 0
     },
     Horse: {
         name: 'Horse',
         level: 3,
         stock: 0,
+        totalCost: 100,
         require: {
             Juice: 100
         },
@@ -176,12 +189,14 @@ const products = {
         usedBy: [
             'Warhorse'
         ],
-        production: 1
+        production: 1,
+        workers: 0
     },
     Ore: {
         name: 'Ore',
         level: 3,
         stock: 0,
+        totalCost: 100,
         require: {
             Juice: 100
         },
@@ -196,12 +211,14 @@ const products = {
             'Gold torc',
             'Thief'
         ],
-        production: 1
+        production: 1,
+        workers: 0
     },
     Fish: {
         name: 'Fish',
         level: 3,
         stock: 0,
+        totalCost: 100,
         require: {
             Juice: 100
         },
@@ -212,12 +229,14 @@ const products = {
             'Milk of the poppy',
             'Dream wine'
         ],
-        production: 1
+        production: 1,
+        workers: 0
     },
     Stone: {
         name: 'Stone',
         level: 5,
         stock: 0,
+        totalCost: 100,
         require: {
             Juice: 100
         },
@@ -228,12 +247,14 @@ const products = {
             'Mead',
             'Wildfire'
         ],
-        production: 1
+        production: 1,
+        workers: 0
     },
     Steel: {
         name: 'Steel',
         level: 6,
         stock: 0,
+        totalCost: 5600,
         require: {
             Juice: 3300,
             'Flickering fire': 1,
@@ -250,12 +271,14 @@ const products = {
             'Steel-shod warhorse',
             'Elite phalanx'
         ],
-        production: 33
+        production: 33,
+        workers: 0
     },
     'Hard wood': {
         name: 'Hard wood',
         level: 6,
         stock: 0,
+        totalCost: 2200,
         require: {
             Juice: 1900,
             Wood: 2,
@@ -272,12 +295,14 @@ const products = {
             'Blazing fire archer',
             'Elite phalanx'
         ],
-        production: 19
+        production: 19,
+        workers: 0
     },
     'Dyed textile': {
         name: 'Dyed textile',
         level: 8,
         stock: 0,
+        totalCost: 7200,
         require: {
             Juice: 6800,
             Cloth: 3,
@@ -291,12 +316,14 @@ const products = {
         usedBy: [
             'Guild assassin'
         ],
-        production: 68
+        production: 68,
+        workers: 0
     },
     'Fine wood': {
         name: 'Fine wood',
         level: 8,
         stock: 0,
+        totalCost: 7000,
         require: {
             Juice: 6700,
             Wood: 2,
@@ -310,12 +337,14 @@ const products = {
         usedBy: [
             'Guild assassin'
         ],
-        production: 67
+        production: 67,
+        workers: 0
     },
     Shortsword: {
         name: 'Shortsword',
         level: 2,
         stock: 0,
+        totalCost: 800,
         require: {
             Juice: 400,
             Wood: 2,
@@ -330,12 +359,14 @@ const products = {
             'Longsword',
             'Broadsword'
         ],
-        production: 4
+        production: 4,
+        workers: 0
     },
     Longsword: {
         name: 'Longsword',
         level: 3,
         stock: 0,
+        totalCost: 1800,
         require: {
             Juice: 800,
             Shortsword: 1,
@@ -350,12 +381,14 @@ const products = {
             'Pike',
             'Foot soldier'
         ],
-        production: 8
+        production: 8,
+        workers: 0
     },
     Dagger: {
         name: 'Dagger',
         level: 3,
         stock: 0,
+        totalCost: 1400,
         require: {
             Juice: 800,
             Wood: 3,
@@ -371,12 +404,14 @@ const products = {
         usedBy: [
             'Axe'
         ],
-        production: 8
+        production: 8,
+        workers: 0
     },
     Axe: {
         name: 'Axe',
         level: 4,
         stock: 0,
+        totalCost: 6000,
         require: {
             Juice: 2600,
             Dagger: 2,
@@ -392,12 +427,14 @@ const products = {
         usedBy: [
             'Militia'
         ],
-        production: 26
+        production: 26,
+        workers: 0
     },
     Shortbow: {
         name: 'Shortbow',
         level: 5,
         stock: 0,
+        totalCost: 2000,
         require: {
             Juice: 1400,
             Wood: 3,
@@ -414,12 +451,14 @@ const products = {
             'Bowman',
             'Composite bow'
         ],
-        production: 14
+        production: 14,
+        workers: 0
     },
     'Wood shield': {
         name: 'Wood shield',
         level: 5,
         stock: 0,
+        totalCost: 2000,
         require: {
             Juice: 1400,
             Wood: 5,
@@ -433,12 +472,14 @@ const products = {
         usedBy: [
             'Metal shield'
         ],
-        production: 14
+        production: 14,
+        workers: 0
     },
     Pike: {
         name: 'Pike',
         level: 6,
         stock: 0,
+        totalCost: 8000,
         require: {
             Juice: 3800,
             Longsword: 2,
@@ -455,12 +496,14 @@ const products = {
             'Lancer',
             'Pikeman'
         ],
-        production: 38
+        production: 38,
+        workers: 0
     },
     Broadsword: {
         name: 'Broadsword',
         level: 6,
         stock: 0,
+        totalCost: 5200,
         require: {
             Juice: 3000,
             Shortsword: 2,
@@ -476,12 +519,14 @@ const products = {
         usedBy: [
             'Hefty broadsword'
         ],
-        production: 30
+        production: 30,
+        workers: 0
     },
     'Composite bow': {
         name: 'Composite bow',
         level: 6,
         stock: 0,
+        totalCost: 9600,
         require: {
             Juice: 5000,
             Shortbow: 2,
@@ -497,12 +542,14 @@ const products = {
         usedBy: [
             'Archer'
         ],
-        production: 50
+        production: 50,
+        workers: 0
     },
     'Metal shield': {
         name: 'Metal shield',
         level: 6,
         stock: 0,
+        totalCost: 9600,
         require: {
             Juice: 5000,
             'Wood shield': 2,
@@ -517,12 +564,14 @@ const products = {
             'Shield bearers',
             'Heavy knight'
         ],
-        production: 50
+        production: 50,
+        workers: 0
     },
     'Light crossbow': {
         name: 'Light crossbow',
         level: 6,
         stock: 0,
+        totalCost: 2800,
         require: {
             Juice: 2200,
             Wood: 3,
@@ -538,12 +587,14 @@ const products = {
         usedBy: [
             'Heavy crossbow'
         ],
-        production: 22
+        production: 22,
+        workers: 0
     },
     'Hefty broadsword': {
         name: 'Hefty broadsword',
         level: 7,
         stock: 0,
+        totalCost: 82400,
         require: {
             Juice: 10600,
             Broadsword: 2,
@@ -559,12 +610,14 @@ const products = {
         usedBy: [
             'Masterwork greatsword'
         ],
-        production: 106
+        production: 106,
+        workers: 0
     },
     'Heavy crossbow': {
         name: 'Heavy crossbow',
         level: 7,
         stock: 0,
+        totalCost: 10600,
         require: {
             Juice: 6600,
             'Light crossbow': 1,
@@ -580,12 +633,14 @@ const products = {
         usedBy: [
             'Assassin'
         ],
-        production: 66
+        production: 66,
+        workers: 0
     },
     'Masterwork greatsword': {
         name: 'Masterwork greatsword',
         level: 8,
         stock: 0,
+        totalCost: 412000,
         require: {
             Juice: 87800,
             'Hefty broadsword': 3,
@@ -601,12 +656,14 @@ const products = {
         usedBy: [
             'Elite cavalryman'
         ],
-        production: 878
+        production: 878,
+        workers: 0
     },
     Doublet: {
         name: 'Doublet',
         level: 2,
         stock: 0,
+        totalCost: 800,
         require: {
             Juice: 400,
             Cloth: 2,
@@ -620,12 +677,14 @@ const products = {
         usedBy: [
             'Leather armor'
         ],
-        production: 4
+        production: 4,
+        workers: 0
     },
     'Unremarkable tunic': {
         name: 'Unremarkable tunic',
         level: 2,
         stock: 0,
+        totalCost: 1200,
         require: {
             Juice: 600,
             Cloth: 3,
@@ -639,12 +698,14 @@ const products = {
         usedBy: [
             "Guard's uniform"
         ],
-        production: 6
+        production: 6,
+        workers: 0
     },
     'Leather armor': {
         name: 'Leather armor',
         level: 3,
         stock: 0,
+        totalCost: 1800,
         require: {
             Juice: 800,
             Doublet: 1,
@@ -661,12 +722,14 @@ const products = {
             'Breastplate',
             'Warhorse'
         ],
-        production: 8
+        production: 8,
+        workers: 0
     },
     "Guard's uniform": {
         name: "Guard's uniform",
         level: 3,
         stock: 0,
+        totalCost: 4600,
         require: {
             Juice: 2200,
             'Unremarkable tunic': 1,
@@ -683,12 +746,14 @@ const products = {
             'Foot soldier',
             'Assassin'
         ],
-        production: 22
+        production: 22,
+        workers: 0
     },
     Purse: {
         name: 'Purse',
         level: 5,
         stock: 0,
+        totalCost: 3500,
         require: {
             Juice: 1900,
             'Gold ring': 1,
@@ -702,12 +767,14 @@ const products = {
         usedBy: [
             'Mounted knight'
         ],
-        production: 19
+        production: 19,
+        workers: 0
     },
     'Linen clothing': {
         name: 'Linen clothing',
         level: 5,
         stock: 0,
+        totalCost: 2000,
         require: {
             Juice: 1400,
             Cloth: 4,
@@ -721,12 +788,14 @@ const products = {
         usedBy: [
             'Silk garment'
         ],
-        production: 14
+        production: 14,
+        workers: 0
     },
     'Silk garment': {
         name: 'Silk garment',
         level: 6,
         stock: 0,
+        totalCost: 7400,
         require: {
             Juice: 4200,
             'Linen clothing': 1,
@@ -742,12 +811,14 @@ const products = {
         usedBy: [
             'Lancer'
         ],
-        production: 42
+        production: 42,
+        workers: 0
     },
     Halfhelm: {
         name: 'Halfhelm',
         level: 3,
         stock: 0,
+        totalCost: 1400,
         require: {
             Juice: 800,
             Iron: 5,
@@ -762,12 +833,14 @@ const products = {
             'Barred helm',
             'Phalanx'
         ],
-        production: 8
+        production: 8,
+        workers: 0
     },
     Breastplate: {
         name: 'Breastplate',
         level: 4,
         stock: 0,
+        totalCost: 6800,
         require: {
             Juice: 2600,
             'Leather armor': 2,
@@ -783,12 +856,14 @@ const products = {
         usedBy: [
             'Armored knight'
         ],
-        production: 26
+        production: 26,
+        workers: 0
     },
     'Barred helm': {
         name: 'Barred helm',
         level: 4,
         stock: 0,
+        totalCost: 6000,
         require: {
             Juice: 2600,
             Halfhelm: 2,
@@ -804,12 +879,14 @@ const products = {
         usedBy: [
             'Armored knight'
         ],
-        production: 26
+        production: 26,
+        workers: 0
     },
     'Gold ring': {
         name: 'Gold ring',
         level: 4,
         stock: 0,
+        totalCost: 1400,
         require: {
             Juice: 900,
             Ore: 5
@@ -822,12 +899,14 @@ const products = {
             'Purse',
             'Gold torc'
         ],
-        production: 9
+        production: 9,
+        workers: 0
     },
     'Silver chain': {
         name: 'Silver chain',
         level: 5,
         stock: 0,
+        totalCost: 1800,
         require: {
             Juice: 1300,
             Ore: 3,
@@ -843,12 +922,14 @@ const products = {
         usedBy: [
             'Silver torc'
         ],
-        production: 13
+        production: 13,
+        workers: 0
     },
     'Silver torc': {
         name: 'Silver torc',
         level: 6,
         stock: 0,
+        totalCost: 5100,
         require: {
             Juice: 3100,
             'Silver chain': 1,
@@ -864,12 +945,14 @@ const products = {
         usedBy: [
             'Gold torc'
         ],
-        production: 31
+        production: 31,
+        workers: 0
     },
     'Gold torc': {
         name: 'Gold torc',
         level: 7,
         stock: 0,
+        totalCost: 14900,
         require: {
             Juice: 7800,
             'Silver torc': 1,
@@ -885,12 +968,14 @@ const products = {
         usedBy: [
             'Heavy knight'
         ],
-        production: 78
+        production: 78,
+        workers: 0
     },
     Ostler: {
         name: 'Ostler',
         level: 3,
         stock: 0,
+        totalCost: 1400,
         require: {
             Juice: 800,
             Smallfolk: 1,
@@ -907,12 +992,14 @@ const products = {
             'Warhorse',
             'Steel-shod warhorse'
         ],
-        production: 8
+        production: 8,
+        workers: 0
     },
     'Warhorse': {
         name: 'Warhorse',
         level: 4,
         stock: 0,
+        totalCost: 5400,
         require: {
             Juice: 2100,
             Horse: 1,
@@ -929,12 +1016,14 @@ const products = {
             'Steel-shod warhorse',
             'Mounted knight'
         ],
-        production: 21
+        production: 21,
+        workers: 0
     },
     'Armored knight': {
         name: 'Armored knight',
         level: 5,
         stock: 0,
+        totalCost: 32300,
         require: {
             Juice: 9500,
             'Foot soldier': 1,
@@ -950,12 +1039,14 @@ const products = {
         usedBy: [
             'Mounted knight'
         ],
-        production: 95
+        production: 95,
+        workers: 0
     },
     'Mounted knight': {
         name: 'Mounted knight',
         level: 6,
         stock: 0,
+        totalCost: 56300,
         require: {
             Juice: 15100,
             'Armored knight': 1,
@@ -971,12 +1062,14 @@ const products = {
         usedBy: [
             'Lancer'
         ],
-        production: 151
+        production: 151,
+        workers: 0
     },
     'Lancer': {
         name: 'Lancer',
         level: 7,
         stock: 0,
+        totalCost: 98000,
         require: {
             Juice: 26300,
             'Mounted knight': 1,
@@ -992,12 +1085,14 @@ const products = {
         usedBy: [
             'Heavy knight'
         ],
-        production: 263
+        production: 263,
+        workers: 0
     },
     'Heavy knight': {
         name: 'Heavy knight',
         level: 8,
         stock: 0,
+        totalCost: 168000,
         require: {
             Juice: 45500,
             Lancer: 1,
@@ -1013,12 +1108,14 @@ const products = {
         usedBy: [
             'Elite cavalryman'
         ],
-        production: 455
+        production: 455,
+        workers: 0
     },
     'Steel-shod warhorse': {
         name: 'Steel-shod warhorse',
         level: 8,
         stock: 0,
+        totalCost: 59200,
         require: {
             Juice: 24600,
             Warhorse: 2,
@@ -1034,12 +1131,14 @@ const products = {
         usedBy: [
             'Elite cavalryman'
         ],
-        production: 246
+        production: 246,
+        workers: 0
     },
     'Elite cavalryman': {
         name: 'Elite cavalryman',
         level: 9,
         stock: 0,
+        totalCost: 809900,
         require: {
             Juice: 170700,
             'Heavy knight': 1,
@@ -1053,12 +1152,14 @@ const products = {
             'Masterwork greatsword': false
         },
         usedBy: [],
-        production: 1707
+        production: 1707,
+        workers: 0
     },
     'Foot soldier': {
         name: 'Foot soldier',
         level: 4,
         stock: 0,
+        totalCost: 10000,
         require: {
             Juice: 3500,
             Smallfolk: 1,
@@ -1074,12 +1175,14 @@ const products = {
         usedBy: [
             'Armored knight'
         ],
-        production: 35
+        production: 35,
+        workers: 0
     },
     Militia: {
         name: 'Militia',
         level: 5,
         stock: 0,
+        totalCost: 9600,
         require: {
             Juice: 3500,
             Smallfolk: 1,
@@ -1096,12 +1199,14 @@ const products = {
             'Pikeman',
             'Shield bearers'
         ],
-        production: 35
+        production: 35,
+        workers: 0
     },
     Bowman: {
         name: 'Bowman',
         level: 6,
         stock: 0,
+        totalCost: 51100,
         require: {
             Juice: 16300,
             Shortbow: 3,
@@ -1115,12 +1220,14 @@ const products = {
         usedBy: [
             'Archer'
         ],
-        production: 163
+        production: 163,
+        workers: 0
     },
     Archer: {
         name: 'Archer',
         level: 7,
         stock: 0,
+        totalCost: 193400,
         require: {
             Juice: 52800,
             'Composite bow': 2,
@@ -1136,12 +1243,14 @@ const products = {
         usedBy: [
             'Fire archer'
         ],
-        production: 528
+        production: 528,
+        workers: 0
     },
     Pikeman: {
         name: 'Pikeman',
         level: 7,
         stock: 0,
+        totalCost: 19600,
         require: {
             Juice: 2000,
             Militia: 1,
@@ -1155,12 +1264,14 @@ const products = {
         usedBy: [
             'Phalanx'
         ],
-        production: 20
+        production: 20,
+        workers: 0
     },
     'Shield bearers': {
         name: 'Shield bearers',
         level: 7,
         stock: 0,
+        totalCost: 58600,
         require: {
             Juice: 20200,
             Militia: 2,
@@ -1174,12 +1285,14 @@ const products = {
         usedBy: [
             'Phalanx'
         ],
-        production: 202
+        production: 202,
+        workers: 0
     },
     'Fire archer': {
         name: 'Fire archer',
         level: 8,
         stock: 0,
+        totalCost: 253400,
         require: {
             Juice: 59600,
             Archer: 1,
@@ -1196,12 +1309,14 @@ const products = {
             'Fireship',
             'Blazing fire archer'
         ],
-        production: 596
+        production: 596,
+        workers: 0
     },
     Phalanx: {
         name: 'Phalanx',
         level: 8,
         stock: 0,
+        totalCost: 233000,
         require: {
             Juice: 71000,
             'Shield bearers': 2,
@@ -1217,12 +1332,14 @@ const products = {
         usedBy: [
             'Elite phalanx'
         ],
-        production: 710
+        production: 710,
+        workers: 0
     },
     'Blazing fire archer': {
         name: 'Blazing fire archer',
         level: 9,
         stock: 0,
+        totalCost: 1011200,
         require: {
             Juice: 218600,
             'Fire archer': 3,
@@ -1236,12 +1353,14 @@ const products = {
             'Hard wood': false
         },
         usedBy: [],
-        production: 2186
+        production: 2186,
+        workers: 0
     },
     'Elite phalanx': {
         name: 'Elite phalanx',
         level: 9,
         stock: 0,
+        totalCost: 839800,
         require: {
             Juice: 239800,
             Phalanx: 2,
@@ -1255,12 +1374,14 @@ const products = {
             'Hard wood': false
         },
         usedBy: [],
-        production: 2398
+        production: 2398,
+        workers: 0
     },
     'Milk of the poppy': {
         name: 'Milk of the poppy',
         level: 4,
         stock: 0,
+        totalCost: 1600,
         require: {
             Juice: 1000,
             Grains: 4,
@@ -1274,12 +1395,14 @@ const products = {
         usedBy: [
             'Dream wine'
         ],
-        production: 10
+        production: 10,
+        workers: 0
     },
     'Flickering fire': {
         name: 'Flickering fire',
         level: 5,
         stock: 0,
+        totalCost: 2000,
         require: {
             Juice: 1400,
             Wood: 3,
@@ -1297,12 +1420,14 @@ const products = {
             'Wildfire',
             'Blazing fire archer'
         ],
-        production: 14
+        production: 14,
+        workers: 0
     },
     'Dream wine': {
         name: 'Dream wine',
         level: 5,
         stock: 0,
+        totalCost: 5800,
         require: {
             Juice: 3000,
             'Milk of the poppy': 1,
@@ -1318,12 +1443,14 @@ const products = {
         usedBy: [
             'Eavesdropper'
         ],
-        production: 30
+        production: 30,
+        workers: 0
     },
     Mead: {
         name: 'Mead',
         level: 6,
         stock: 0,
+        totalCost: 2600,
         require: {
             Juice: 2100,
             Grains: 3,
@@ -1339,12 +1466,14 @@ const products = {
         usedBy: [
             'Pure water'
         ],
-        production: 21
+        production: 21,
+        workers: 0
     },
     'Pure water': {
         name: 'Pure water',
         level: 7,
         stock: 0,
+        totalCost: 8500,
         require: {
             Juice: 5600,
             Mead: 1,
@@ -1358,12 +1487,14 @@ const products = {
         usedBy: [
             'Wildfire'
         ],
-        production: 56
+        production: 56,
+        workers: 0
     },
     'Wildfire': {
         name: 'Wildfire',
         level: 8,
         stock: 0,
+        totalCost: 42200,
         require: {
             Juice: 20800,
             'Pure water': 2,
@@ -1379,12 +1510,14 @@ const products = {
         usedBy: [
             'Fireship'
         ],
-        production: 208
+        production: 208,
+        workers: 0
     },
     Eavesdropper: {
         name: 'Eavesdropper',
         level: 6,
         stock: 0,
+        totalCost: 10600,
         require: {
             Juice: 4700,
             Smallfolk: 1,
@@ -1398,12 +1531,14 @@ const products = {
         usedBy: [
             'Thief'
         ],
-        production: 47
+        production: 47,
+        workers: 0
     },
     Thief: {
         name: 'Thief',
         level: 7,
         stock: 0,
+        totalCost: 20100,
         require: {
             Juice: 8700,
             Eavesdropper: 1,
@@ -1420,12 +1555,14 @@ const products = {
             'Smuggling vessel',
             'Assassin'
         ],
-        production: 87
+        production: 87,
+        workers: 0
     },
     Barque: {
         name: 'Barque',
         level: 7,
         stock: 0,
+        totalCost: 5800,
         require: {
             Juice: 4500,
             Wood: 10,
@@ -1439,12 +1576,14 @@ const products = {
         usedBy: [
             'Smuggling vessel'
         ],
-        production: 45
+        production: 45,
+        workers: 0
     },
     'Smuggling vessel': {
         name: 'Smuggling vessel',
         level: 8,
         stock: 0,
+        totalCost: 143600,
         require: {
             Juice: 50900,
             Barque: 2,
@@ -1460,12 +1599,14 @@ const products = {
         usedBy: [
             'Fireship'
         ],
-        production: 509
+        production: 509,
+        workers: 0
     },
     Assassin: {
         name: 'Assassin',
         level: 8,
         stock: 0,
+        totalCost: 59200,
         require: {
             Juice: 23900,
             Thief: 1,
@@ -1481,12 +1622,14 @@ const products = {
         usedBy: [
             'Guild assassin'
         ],
-        production: 239
+        production: 239,
+        workers: 0
     },
     Fireship: {
         name: 'Fireship',
         level: 9,
         stock: 0,
+        totalCost: 1531800,
         require: {
             Juice: 400200,
             Wildfire: 8,
@@ -1500,12 +1643,14 @@ const products = {
             'Fire archer': false
         },
         usedBy: [],
-        production: 4002
+        production: 4002,
+        workers: 0
     },
     'Guild assassin': {
         name: 'Guild assassin',
         level: 9,
         stock: 0,
+        totalCost: 677600,
         require: {
             Juice: 287000,
             Assassin: 3,
@@ -1519,7 +1664,8 @@ const products = {
             'Fine wood': false
         },
         usedBy: [],
-        production: 2870
+        production: 2870,
+        workers: 0
     }
 }
 

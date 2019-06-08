@@ -3,16 +3,16 @@ import './LevelUpButton.css';
 import { currency } from '../products_en';
 
 const LevelUpButton = ({ storage, level, levelUp }) => {
-    if (storage[currency].stock >= level * 1000) {
+    let price = [1000, 5000, 20000, 50000, 100000, 250000, 500000, 1000000]
+    if (storage[currency].stock >= price[level - 1] && level < 9) {
         return (
             <button className='levelup-button'
-                onClick={() => levelUp()}>
+                onClick={() => levelUp(price[level - 1])}>
                 <strong>Level UP!</strong>
             </button>
         );
-    } else {
-        return (null);
     }
+    return (null);
 }
- 
+
 export default LevelUpButton;

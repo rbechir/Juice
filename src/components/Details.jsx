@@ -16,7 +16,8 @@ const Details = ({ storage, key_product }) => {
                             key_element={key_element}
                             key_product={key_product} />
                     </div>
-            ))}
+                )
+            )}
         </div>
     );
 }

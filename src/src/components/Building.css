@@ -1,9 +1,0 @@
-.building {
-    background-color: #dbddec;
-    width: 200px;
-    border-radius: 10px;
-    margin: 5px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
