@@ -8,16 +8,7 @@ const getImage = key_product => {
     }
 }
 
-const Logo = ({ storage, key_product, buyProduct }) => {
-    let onClick = null;
-    let name = 'logo';
-    if (buyProduct) {
-        if (Object.values(storage[key_product].complete).includes(false)) {
-            name = 'logo transparent';
-        } else {
-            onClick = () => buyProduct(key_product);
-        }
-    }
+const Logo = ({ onClick, key_product, name }) => {
     return (
         <div className='logo-container'>
             <img className={name}

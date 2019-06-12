@@ -1,12 +1,12 @@
 import React, { Fragment } from 'react';
 import './Building.css';
+import { currency } from '../products_en';
 import Products from './Products';
 import UnlockBuildingButton from './UnlockBuildingButton';
 import UpgradeBuildingButton from './UpgradeBuildingButton';
 import UpgradeText from './UpgradeText';
 
 const Building = ({ building, storage, level, production, workersCost, buyProduct, buyBuilding, upgradeBuilding, toggleBuilding, changeWorkerNumber }) => {
-    
     if (building.unlocked) {
         return (
             <div className='building'>
@@ -21,11 +21,14 @@ const Building = ({ building, storage, level, production, workersCost, buyProduc
                         buyProduct={buyProduct}
                         changeWorkerNumber={changeWorkerNumber} />
                     <UpgradeText
-                        building={building}
+                        buildingPrice={building.price}
+                        buildingLevel={building.level}
                         level={level} />
                     <UpgradeBuildingButton
-                        building={building}
-                        storage={storage}
+                        buildingPrice={building.price}
+                        buildingLevel={building.level}
+                        buildingName={building.name}
+                        juiceStock={storage[currency].stock}
                         level={level}
                         upgradeBuilding={upgradeBuilding} />
                 </Fragment>}
@@ -39,12 +42,14 @@ const Building = ({ building, storage, level, production, workersCost, buyProduc
                     Pay {building.price[building.level - 1]} to unlock
                 </h3>
                 <UnlockBuildingButton
-                    building={building}
-                    storage={storage}
+                    buildingPrice={building.price[building.level - 1]}
+                    buildingName={building.name}
+                    juiceStock={storage[currency].stock}
                     buyBuilding={buyBuilding} />
             </div>
         );
     }
+    
     return (null);
 }
 

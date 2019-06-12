@@ -40,8 +40,7 @@ class App extends Component {
     return (storage);
   }
 
-  buyProductNoState = (key_product, storage, production) => {
-    console.log(key_product)
+  buyProductNoSetState = (key_product, storage, production) => {
     Object.keys(storage[key_product].require).forEach(key_element => {
       storage[key_element].stock -= storage[key_product].require[key_element];
       production -= storage[key_element].production * storage[key_product].require[key_element];
@@ -68,7 +67,7 @@ class App extends Component {
   buyProduct = key_product => {
     let storage = { ...this.state.storage };
     let production = this.state.production;
-    let res = this.buyProductNoState(key_product, storage, production);
+    let res = this.buyProductNoSetState(key_product, storage, production);
     storage = res.storage;
     production = res.production;
     this.setState({
@@ -134,7 +133,7 @@ class App extends Component {
     Object.keys(storage).forEach(key_product => {
       if (key_product !== currency && !Object.values(storage[key_product].complete).includes(false)) {
         for (let i = 0; i < storage[key_product].workers; i++) {
-          let res = this.buyProductNoState(key_product, storage, production);
+          let res = this.buyProductNoSetState(key_product, storage, production);
           storage = res.storage;
           production = res.production;
         }
@@ -183,7 +182,7 @@ class App extends Component {
             stock={this.state.storage[currency].stock}
             manualJuice={this.manualJuice} />
           <PlayerLevel
-            storage={this.state.storage}
+            juiceStock={this.state.storage[currency].stock}
             level={this.state.level}
             levelUp={this.levelUp} />
         </div>

@@ -7,6 +7,7 @@ const Workers = ({ storage, production, workersCost, key_product, changeWorkerNu
     let onClickAdd = () => changeWorkerNumber(key_product, 1);
     let del = '';
     let onClickDel = () => changeWorkerNumber(key_product, -1);
+    
     if (storage[currency].stock < 100 * Math.pow(2, storage[key_product].workers)
         || workersCost + storage[key_product].totalCost > production) {
         onClickAdd = null;
@@ -16,6 +17,7 @@ const Workers = ({ storage, production, workersCost, key_product, changeWorkerNu
         onClickDel = null;
         del = 'worker-transparent';
     }
+
     return (
         <div className='workers'>
             <button className={add}

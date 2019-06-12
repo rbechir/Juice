@@ -8,15 +8,17 @@ const Detail = ({ storage, key_element, key_product }) => {
     const complete = storage[key_product].complete[key_element];
     const required = storage[key_product].require[key_element];
     const stock = storage[key_element].stock;
+
     if (complete) {
         color = 'green';
     }
+    
     return (
         <div className='detail'>
             <Logo
-                storage={storage}
                 key_product={key_element}
-                buyProduct={null} />
+                onClick={null}
+                name='logo' />
             <div className={`stock ${color}`}>
                 {stock} / {required}
             </div>

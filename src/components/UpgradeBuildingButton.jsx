@@ -1,16 +1,16 @@
 import React from 'react';
-import './UpgradeBuildingButton.css';
-import { currency } from '../products_en';
+import Button from './Button';
 
-const UpgradeBuildingButton = ({ building, storage, level, upgradeBuilding }) => {
-    if (storage[currency].stock >= building.price[building.level] && building.level < 9 && building.level < level) {
+const UpgradeBuildingButton = ({ buildingPrice, buildingLevel, buildingName, juiceStock, level, upgradeBuilding }) => {
+    if (juiceStock >= buildingPrice[buildingLevel] && buildingLevel < 9 && buildingLevel < level) {
         return (
-            <button className='upgrade-building-button'
-                onClick={() => upgradeBuilding(building.name)}>
-                <strong>Upgrade</strong>
-            </button>
+            <Button
+                name='building-button'
+                onClick={() => upgradeBuilding(buildingName)}
+                text='Upgrade' />
         );
     }
+
     return (null);
 }
 

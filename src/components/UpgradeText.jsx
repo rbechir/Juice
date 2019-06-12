@@ -1,12 +1,13 @@
 import React from 'react';
 
-const UpgradeText = ({ building, level }) => {
-    if (building.level >= 9 || building.level >= level) {
+const UpgradeText = ({ buildingPrice, buildingLevel, level }) => {
+    if (buildingLevel >= 9 || buildingLevel >= level) {
         return (null);
     }
+    
     return (
         <h3>
-            Pay {building.price[building.level]} to upgrade
+            Pay {buildingPrice[buildingLevel]} to upgrade
         </h3>
     )
 }

@@ -2,14 +2,14 @@ import React from 'react';
 import Popup from 'reactjs-popup';
 import './Product.css'
 import Details from './Details';
-import Logo from './Logo';
+import BuyProduct from './BuyProduct';
 import Workers from './Workers';
 
 const Product = ({ key_product, storage, production, workersCost, buyProduct, changeWorkerNumber }) => {
     return (
         <div className='product'>
-            <Logo
-                storage={storage}
+            <BuyProduct
+                complete={storage[key_product].complete}
                 key_product={key_product}
                 buyProduct={buyProduct} />
             <Popup

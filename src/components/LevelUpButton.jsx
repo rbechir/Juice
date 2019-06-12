@@ -1,17 +1,18 @@
 import React from 'react';
-import './LevelUpButton.css';
-import { currency } from '../products_en';
+import Button from './Button';
 
-const LevelUpButton = ({ storage, level, levelUp }) => {
+const LevelUpButton = ({ juiceStock, level, levelUp }) => {
     let price = [1000, 5000, 20000, 50000, 100000, 250000, 500000, 1000000]
-    if (storage[currency].stock >= price[level - 1] && level < 9) {
+
+    if (juiceStock >= price[level - 1] && level < 9) {
         return (
-            <button className='levelup-button'
-                onClick={() => levelUp(price[level - 1])}>
-                <strong>Level UP!</strong>
-            </button>
+            <Button
+                name='levelup-button'
+                onClick={() => levelUp(price[level - 1])}
+                text='Level UP!' />
         );
     }
+
     return (null);
 }
 
