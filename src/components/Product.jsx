@@ -1,6 +1,6 @@
 import React from 'react';
 import Popup from 'reactjs-popup';
-import './Product.css'
+import '../css/Product.css'
 import Details from './Details';
 import BuyProduct from './BuyProduct';
 import Workers from './Workers';

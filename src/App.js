@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './App.css';
+import './css/App.css';
 import Buildings from './components/Buildings';
 import products, { currency } from './products_en';
 import buildings from './buildings_en';

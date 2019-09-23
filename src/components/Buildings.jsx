@@ -1,5 +1,5 @@
 import React from 'react';
-import './Buildings.css';
+import '../css/Buildings.css';
 import Building from './Building';
 
 const Buildings = ({ buildings, storage, level, production, workersCost, buyProduct, buyBuilding, upgradeBuilding, toggleBuilding, changeWorkerNumber }) => {

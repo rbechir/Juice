@@ -1,5 +1,5 @@
 import React from 'react';
-import './JuiceProduction.css';
+import '../css/JuiceProduction.css';
 import JuiceButton from './JuiceButton';
 
 const JuiceProduction = ({ level, stock, manualJuice }) => {

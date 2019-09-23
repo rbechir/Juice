@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import './Building.css';
+import '../css/Building.css';
 import { currency } from '../products_en';
 import Products from './Products';
 import UnlockBuildingButton from './UnlockBuildingButton';

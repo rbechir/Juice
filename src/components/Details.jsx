@@ -1,5 +1,5 @@
 import React from 'react';
-import './Details.css';
+import '../css/Details.css';
 import Detail from './Detail';
 
 const Details = ({ storage, key_product }) => {

@@ -1,5 +1,5 @@
 import React from 'react';
-import './Workers.css';
+import '../css/Workers.css';
 import { currency } from '../products_en';
 
 const Workers = ({ storage, production, workersCost, key_product, changeWorkerNumber }) => {

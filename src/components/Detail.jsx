@@ -1,6 +1,6 @@
 import React from 'react';
-import './Detail.css';
-import './Logo.css';
+import '../css/Detail.css';
+import '../css/Logo.css';
 import Logo from './Logo';
 
 const Detail = ({ storage, key_element, key_product }) => {

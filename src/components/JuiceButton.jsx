@@ -1,5 +1,5 @@
 import React from 'react';
-import './JuiceButton.css';
+import '../css/JuiceButton.css';
 import Logo from './Logo';
 
 const JuiceButton = ({ level, manualJuice }) => {

@@ -1,5 +1,5 @@
 import React from 'react';
-import './PlayerLevel.css';
+import '../css/PlayerLevel.css';
 import LevelUpButton from './LevelUpButton';
 
 const PlayerLevel = ({ juiceStock, level, levelUp }) => {
