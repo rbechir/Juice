@@ -1,12 +1,12 @@
 import React from 'react';
 import Button from './Button';
 
-const UnlockBuildingButton = ({ buildingPrice, buildingName, juiceStock, buyBuilding }) => {
-    if (juiceStock >= buildingPrice) {
+const UnlockBuildingButton = (props) => {
+    if (props.juiceStock >= props.buildingPrice) {
         return (
             <Button
                 name='building-button'
-                onClick={() => buyBuilding(buildingName)}
+                onClick={() => props.buyBuilding(props.buildingName)}
                 text='Unlock' />
         );
     }

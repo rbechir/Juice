@@ -57,9 +57,9 @@ class App extends Component {
     production += storage[key_product].production;
     storage[key_product].stock += 1;
     storage[key_product].usedBy.forEach(key_element => {
-        if (storage[key_product].stock >= storage[key_element].require[key_product]) {
-          storage[key_element].complete[key_product] = true;
-        }
+      if (storage[key_product].stock >= storage[key_element].require[key_product]) {
+        storage[key_element].complete[key_product] = true;
+      }
     });
     return ({ storage, production });
   }
@@ -118,7 +118,7 @@ class App extends Component {
     if (number < 0) {
       storage[currency].stock += 100 * Math.pow(2, storage[key_product].workers - 1);
     } else {
-      storage[currency].stock -= 100 * Math.pow(2, storage[key_product].workers);  
+      storage[currency].stock -= 100 * Math.pow(2, storage[key_product].workers);
     }
     storage[key_product].workers += number;
     workersCost += number * storage[key_product].totalCost;

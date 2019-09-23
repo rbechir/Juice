@@ -8,13 +8,13 @@ const getImage = key_product => {
     }
 }
 
-const Logo = ({ onClick, key_product, name }) => {
+const Logo = (props) => {
     return (
         <div className='logo-container'>
-            <img className={name}
-                onClick={onClick}
-                src={getImage(key_product)}
-                alt={key_product} />
+            <img className={props.name}
+                onClick={props.onClick}
+                src={getImage(props.key_product)}
+                alt={props.key_product} />
         </div>
     );
 }

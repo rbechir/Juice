@@ -5,18 +5,18 @@ import Details from './Details';
 import BuyProduct from './BuyProduct';
 import Workers from './Workers';
 
-const Product = ({ key_product, storage, production, workersCost, buyProduct, changeWorkerNumber }) => {
+const Product = (props) => {
     return (
         <div className='product'>
             <BuyProduct
-                complete={storage[key_product].complete}
-                key_product={key_product}
-                buyProduct={buyProduct} />
+                complete={props.storage[props.key_product].complete}
+                key_product={props.key_product}
+                buyProduct={props.buyProduct} />
             <Popup
                 trigger={
-                    <div className={`name-container tier${storage[key_product].level}`}>
+                    <div className={`name-container tier${props.storage[props.key_product].level}`}>
                         <div className='name'>
-                            <strong>{key_product}<br/>{storage[key_product].stock}</strong>
+                            <strong>{props.key_product}<br />{props.storage[props.key_product].stock}</strong>
                         </div>
                     </div>}
                 position='bottom center'
@@ -25,15 +25,15 @@ const Product = ({ key_product, storage, production, workersCost, buyProduct, ch
                 mouseEnterDelay={500}
                 mouseLeaveDelay={0}>
                 <Details
-                    storage={storage}
-                    key_product={key_product} />
+                    storage={props.storage}
+                    key_product={props.key_product} />
             </Popup>
             <Workers
-                storage={storage}
-                production={production}
-                workersCost={workersCost}
-                key_product={key_product}
-                changeWorkerNumber={changeWorkerNumber} />
+                storage={props.storage}
+                production={props.production}
+                workersCost={props.workersCost}
+                key_product={props.key_product}
+                changeWorkerNumber={props.changeWorkerNumber} />
         </div>
     );
 }

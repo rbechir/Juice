@@ -1,20 +1,20 @@
 import React from 'react';
 import Logo from './Logo';
 
-const BuyProduct = ({ complete, key_product, buyProduct }) => {
+const BuyProduct = (props) => {
     let onClick = null;
     let name = '';
 
-    if (Object.values(complete).includes(false)) {
+    if (Object.values(props.complete).includes(false)) {
         name = 'transparent';
     } else {
-        onClick = () => buyProduct(key_product);
+        onClick = () => props.buyProduct(props.key_product);
     }
-    
+
     return (
         <Logo
             onClick={onClick}
-            key_product={key_product}
+            key_product={props.key_product}
             name={`logo ${name}`} />
     );
 }

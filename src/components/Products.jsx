@@ -1,19 +1,19 @@
 import React from 'react';
 import Product from './Product';
 
-const Products = ({ level, products, storage, production, workersCost, buyProduct, changeWorkerNumber }) => {
+const Products = (props) => {
     return (
-        products.map(key_product => {
-            if (level >= storage[key_product].level) {
+        props.products.map(key_product => {
+            if (props.level >= props.storage[key_product].level) {
                 return (
                     <Product
                         key={key_product}
                         key_product={key_product}
-                        storage={storage}
-                        production={production}
-                        workersCost={workersCost}
-                        buyProduct={buyProduct}
-                        changeWorkerNumber={changeWorkerNumber} />);
+                        storage={props.storage}
+                        production={props.production}
+                        workersCost={props.workersCost}
+                        buyProduct={props.buyProduct}
+                        changeWorkerNumber={props.changeWorkerNumber} />);
             }
             return (null);
         })

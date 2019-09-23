@@ -1,12 +1,13 @@
 import React from 'react';
 import Button from './Button';
 
-const UpgradeBuildingButton = ({ buildingPrice, buildingLevel, buildingName, juiceStock, level, upgradeBuilding }) => {
-    if (juiceStock >= buildingPrice[buildingLevel] && buildingLevel < 9 && buildingLevel < level) {
+const UpgradeBuildingButton = (props) => {
+    if (props.juiceStock >= props.buildingPrice[props.buildingLevel]
+        && props.buildingLevel < 9 && props.buildingLevel < props.level) {
         return (
             <Button
                 name='building-button'
-                onClick={() => upgradeBuilding(buildingName)}
+                onClick={() => props.upgradeBuilding(props.buildingName)}
                 text='Upgrade' />
         );
     }

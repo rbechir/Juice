@@ -2,18 +2,18 @@ import React from 'react';
 import '../css/Workers.css';
 import { currency } from '../products_en';
 
-const Workers = ({ storage, production, workersCost, key_product, changeWorkerNumber }) => {
+const Workers = (props) => {
     let add = '';
-    let onClickAdd = () => changeWorkerNumber(key_product, 1);
+    let onClickAdd = () => props.changeWorkerNumber(props.key_product, 1);
     let del = '';
-    let onClickDel = () => changeWorkerNumber(key_product, -1);
-    
-    if (storage[currency].stock < 100 * Math.pow(2, storage[key_product].workers)
-        || workersCost + storage[key_product].totalCost > production) {
+    let onClickDel = () => props.changeWorkerNumber(props.key_product, -1);
+
+    if (props.storage[currency].stock < 100 * Math.pow(2, props.storage[props.key_product].workers)
+        || props.workersCost + props.storage[props.key_product].totalCost > props.production) {
         onClickAdd = null;
         add = 'worker-transparent';
     }
-    if (storage[key_product].workers <= 0) {
+    if (props.storage[props.key_product].workers <= 0) {
         onClickDel = null;
         del = 'worker-transparent';
     }
@@ -24,7 +24,7 @@ const Workers = ({ storage, production, workersCost, key_product, changeWorkerNu
                 onClick={onClickAdd}>
                 <strong>+</strong>
             </button>
-            <strong>{storage[key_product].workers}</strong>
+            <strong>{props.storage[props.key_product].workers}</strong>
             <button className={del}
                 onClick={onClickDel}>
                 <strong>-</strong>

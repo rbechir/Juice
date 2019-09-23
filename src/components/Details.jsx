@@ -2,22 +2,22 @@ import React from 'react';
 import '../css/Details.css';
 import Detail from './Detail';
 
-const Details = ({ storage, key_product }) => {
+const Details = (props) => {
     return (
         <div className='details'>
             <div className='prod'>
-                {storage[key_product].stock * storage[key_product].production} / s
+                {props.storage[props.key_product].stock * props.storage[props.key_product].production} / s
             </div>
-            {Object.keys(storage[key_product].require)
+            {Object.keys(props.storage[props.key_product].require)
                 .map((key_element, i) => (
                     <div key={key_element}>
                         <Detail
-                            storage={storage}
+                            storage={props.storage}
                             key_element={key_element}
-                            key_product={key_product} />
+                            key_product={props.key_product} />
                     </div>
                 )
-            )}
+                )}
         </div>
     );
 }

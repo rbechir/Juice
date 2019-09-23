@@ -2,24 +2,24 @@ import React from 'react';
 import '../css/Buildings.css';
 import Building from './Building';
 
-const Buildings = ({ buildings, storage, level, production, workersCost, buyProduct, buyBuilding, upgradeBuilding, toggleBuilding, changeWorkerNumber }) => {
+const Buildings = (props) => {
     return (
         <div className='buildings'>
-            {Object.keys(buildings)
+            {Object.keys(props.buildings)
                 .map(key_building => {
                     return (
                         <Building
                             key={key_building}
-                            building={buildings[key_building]}
-                            storage={storage}
-                            level={level}
-                            production={production}
-                            workersCost={workersCost}
-                            buyProduct={buyProduct}
-                            buyBuilding={buyBuilding}
-                            upgradeBuilding={upgradeBuilding}
-                            toggleBuilding={toggleBuilding}
-                            changeWorkerNumber={changeWorkerNumber} />
+                            building={props.buildings[key_building]}
+                            storage={props.storage}
+                            level={props.level}
+                            production={props.production}
+                            workersCost={props.workersCost}
+                            buyProduct={props.buyProduct}
+                            buyBuilding={props.buyBuilding}
+                            upgradeBuilding={props.upgradeBuilding}
+                            toggleBuilding={props.toggleBuilding}
+                            changeWorkerNumber={props.changeWorkerNumber} />
                     );
                 })}
         </div>

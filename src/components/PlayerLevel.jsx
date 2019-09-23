@@ -2,16 +2,16 @@ import React from 'react';
 import '../css/PlayerLevel.css';
 import LevelUpButton from './LevelUpButton';
 
-const PlayerLevel = ({ juiceStock, level, levelUp }) => {
+const PlayerLevel = (props) => {
     return (
         <div className='player-level'>
-            <h1>Level : {level}</h1>
+            <h1>Level : {props.level}</h1>
             <LevelUpButton
-                juiceStock={juiceStock}
-                level={level}
-                levelUp={levelUp} />
+                juiceStock={props.juiceStock}
+                level={props.level}
+                levelUp={props.levelUp} />
         </div>
     );
 }
- 
+
 export default PlayerLevel;
